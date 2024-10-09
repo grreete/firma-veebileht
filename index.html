@@ -7,44 +7,29 @@
     <script src="https://kit.fontawesome.com/f99ae708c1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Company Web</title>
-    <script>
-        // Initialize and add the map
-        function initMap() {
-            // The location of Uluru
-            const uluru = { lat: 58.349451, lng: 26.714696 } ;
-            // The map, centered at Uluru
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 16,
-                center: uluru,
-            });
-            // The marker, positioned at Uluru
-            const marker = new google.maps.Marker ({
-                position: uluru,
-                map: map,
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </head>
 <body id="home">
     <!--navbar-->
-    <!--navbar-->
+    <header>
     <nav id="navbar">
         <h1>
             <span class="text-primary"><i class="fas fa-book-open"></i> FIR</span> MA
         </h1>
         <ul>
-            <li><a href="home">Avaleht</a></li>
-            <li><a href="what">Teenused</a></li>
-            <li><a href="who">Meeskond</a></li>
-            <li><a href="clients">Kliendid</a></li>
-            <li><a href="contact">Kontakt</a></li>
+            <li><a href="#home">Avaleht</a></li>
+            <li><a href="#what">Teenused</a></li>
+            <li><a href="#who">Meeskond</a></li>
+            <li><a href="#clients">Kliendid</a></li>
+            <li><a href="#contact">Kontakt</a></li>
         </ul>
     </nav>
+    </header>
 
     <!--header - showcase-->
     <header id="showcase">
         <div class="showcase-content">
-            <h1 class="l-heading">Lihtsalt Tee Midagi</h1>
+            <h2 class="l-heading">Lihtsalt Tee Midagi</h2>
             <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam veritatis omnis hic molestias exercitationem suscipit.</p>
             <a href="#what" class="btn btn-primary">Loe rohkem</a>
         </div>
@@ -121,23 +106,24 @@
             <form action="">
                 <div class="form-group">
                     <label for="name">Nimi</label>
-                    <input type="text" id="name" placeholder="Sisesta oma nimi">
+                    <input type="text" id="name" placeholder="Sisesta oma nimi" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Sisesta oma email">
+                    <input type="email" id="email" placeholder="Sisesta oma email" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Telefon</label>
-                    <input type="phone" id="phone" placeholder="Sisesta oma telefoni number">
+                    <input type="tel" id="phone" placeholder="Sisesta oma telefoni number">
                 </div>
                 <div class="form-group">
                     <label for="message">Sõnum</label>
-                    <textarea id="message" placeholder="Sisesta oma sõnum"></textarea>
+                    <textarea id="message" placeholder="Sisesta oma sõnum" required></textarea>
                 </div>
                 <input type="submit" value="Saada" class="btn btn-dark">
             </form>
         </div>
+
      <!--map-->
      <div id="map" class="contact-map"></div>
     </section>
@@ -147,7 +133,7 @@
         <p>Kõik õigused on kaitstud &copy;2021</p>
     </footer>
 
-    <!--map script-->
+    <!--Google maps script-->
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgA55APPdvlfGCiWl55jQ40rakd_4Pku8&callback=initMap"></script>
 </body>
 </html>
